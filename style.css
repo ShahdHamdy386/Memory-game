@@ -1,0 +1,76 @@
+:root{
+    --pink: rgb(231, 104, 125);
+    --violette: rgb(114, 73, 153);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0px 20px;
+}
+header .game_name{
+    font-size: 30px;
+    padding-bottom: 30px;
+    color: var(--violette);
+}
+header .game_script{
+    padding: 0 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+header .game_script p span{
+    color: var(--pink);
+}
+.restart{
+    color: var(--violette);
+    cursor: pointer;
+}
+.cards {
+    width: 80%;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid var(--violette);
+    border-radius: 30px;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 22%;
+    height: 100px;
+    margin: 20px 0;
+    border: 1px solid var(--pink);
+    background-color: var(--pink);
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.card.flipped {
+    transform: rotateY(360deg);
+    background: white;
+    color: var(--violette);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front {
+    display: none;
+    font-size: 18px;
+
+}
